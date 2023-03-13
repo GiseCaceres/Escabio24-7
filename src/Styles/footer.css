@@ -1,0 +1,38 @@
+.footer{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo__img{
+    width: 10em;
+}
+.footer__link{
+    text-decoration: none;
+    color: white;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact__title{
+    color: white;
+}
+.contact__redes{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+@media (min-width: 1024px)  { 
+    .footer{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .contact{
+        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
+    }
+}

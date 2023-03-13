@@ -1,0 +1,11 @@
+.main {
+  height: auto;
+  &__section {
+    width: 80%;
+    height: 50%;
+    border: solid 1px black;
+    border-radius: 20px;
+    box-shadow: 0 0 8px rgb(1, 213, 1), 0 0 8px rgb(1, 213, 1),
+      0 0 8px rgb(1, 213, 1), 0 0 8px rgb(1, 213, 1);
+  }
+}
