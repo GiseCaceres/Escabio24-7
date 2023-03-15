@@ -51,6 +51,7 @@
       top: 45%;
       width: 100%;
     }
+
     // &:hover > &__title {
     // }
 
@@ -64,16 +65,21 @@
     }
   }
 }
-/*         Footer       */
-@import "../components/Footer/Style";
 
 /*   Medidas mobile   */
 @media screen and (max-width: 850px) {
+  /*         Navbar        */
   @import "../components/Navbar/Style/indexMobile.scss";
+  /*         Cards       */
+  @import "../components/Card/Style/index.scss";
+  /*         Footer       */
+  @import "../components/Footer/Style/index.scss";
 }
 
 /*   Medidas desktop   */
 @media screen and (min-width: 851px) {
   @import "../components/Main/Style/index.scss";
   @import "../components/Navbar/Style/indexDesktop.scss";
+  /*         Footer       */
+  @import "../components/Footer/Style/indexDesktop.scss";
 }

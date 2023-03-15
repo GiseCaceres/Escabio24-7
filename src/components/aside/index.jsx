@@ -38,12 +38,12 @@ const Aside = ({ Main }) => {
 
       <aside className="aside">
         {sections.map((section, index) => (
-          <Link to={"/Cards/" + section.category}>
-            <div key={index} className="aside__section">
+          <Link className="aside__section" to={"/Cards/" + section.category}>
+            <div key={index}>
               <img
                 className="aside__section__img"
                 src={section.url}
-                alt="putaas"
+                alt="Bebidas"
               ></img>
               <div className="aside__section__container"></div>
               <h1 className="aside__section__title">{section.title}</h1>

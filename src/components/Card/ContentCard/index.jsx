@@ -1,23 +1,27 @@
-import "../ContentCard/cardt.css";
-
-const Cards = ({ img, title, description, price }) => {
+const Cards = ({ img, title, price }) => {
   return (
     <div className="card">
-      <div className="card__content">
-        <div className="card__image-container">
-          <img className="card__image" alt="bebidas" src={img} />
+      <div className="card__contenedor">
+        <div className="card__contenedor__imagenContenedor">
+          <img
+            className="card__contenedor__imagenContenedor__imagen"
+            alt="bebidas"
+            src={img}
+          />
         </div>
-        <div className="card__details">
-          <h4 className="card__title">{title}</h4>
-          <div className="card__row">
-            <span className="card__price">{price}</span>
+        <div className="card__contenedor__detalle">
+          <h4 className="card__contenedor__detalle__titulo">{title}</h4>
+          <div className="card__contenedor__detalle__row">
+            <span className="card__contenedor__detalle__row__precio">
+              {price}
+            </span>
           </div>
-          {/* <div className="card__row">
-              <span className="card__description">{description}</span>
-            </div> */}
-          <div className="card__contentButton">
-            <a href="#" class="ov-btn-slide-left">
-              COMPRAR
+          <div className="card__contenedor__detalle__contenedorButton">
+            <a
+              href="#"
+              class="card__contenedor__detalle__contenedorButton__ov-btn-slide-left"
+            >
+              VER MÁS
             </a>
           </div>
         </div>

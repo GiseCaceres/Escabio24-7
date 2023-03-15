@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: black;
+  &__img {
+    width: 15%;
+    margin: 3%;
+  }
+  &__contacto {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+
+    &__tituloFooter {
+      color: white;
+      font-family: "Antonio", sans-serif;
+      letter-spacing: 3px;
+    }
+    &__redes {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      &__link {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
