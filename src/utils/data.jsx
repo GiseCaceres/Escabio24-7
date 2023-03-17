@@ -1,5 +1,6 @@
 export const data = [
   {
+    id: 100,
     category: 1,
     img: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/144/141/products/mesa-de-trabajo-51_1-10011-6bad72be828aca317516696657206839-640-0.jpg",
     title: "Fernet Branca",
@@ -7,6 +8,7 @@ export const data = [
     price: "$4180",
   },
   {
+    id: 101,
     category: 1,
     img: "assets/delivery.png",
     title: "Fernet 1882",
@@ -14,6 +16,7 @@ export const data = [
     price: "$2850",
   },
   {
+    id: 200,
     category: 2,
     img: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/144/141/products/mesa-de-trabajo-51_1-10011-6bad72be828aca317516696657206839-640-0.jpg",
     title: "Smirnoff con speed",
@@ -21,6 +24,7 @@ export const data = [
     price: "$4180",
   },
   {
+    id: 201,
     category: 2,
     img: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/144/141/products/mesa-de-trabajo-51_1-10011-6bad72be828aca317516696657206839-640-0.jpg",
     title: "Raspberry con speed",
@@ -28,6 +32,7 @@ export const data = [
     price: "$4180",
   },
   {
+    id: 203,
     category: 2,
     img: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/144/141/products/mesa-de-trabajo-51_1-10011-6bad72be828aca317516696657206839-640-0.jpg",
     title: "Smirnoff con jugo",
@@ -36,6 +41,7 @@ export const data = [
     price: "$4180",
   },
   {
+    id: 204,
     category: 2,
     img: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/144/141/products/mesa-de-trabajo-51_1-10011-6bad72be828aca317516696657206839-640-0.jpg",
     title: "Raspberry con jugo",
@@ -44,6 +50,7 @@ export const data = [
     price: "$4180",
   },
   {
+    id: 300,
     category: 3,
     img: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/144/141/products/mesa-de-trabajo-51_1-10011-6bad72be828aca317516696657206839-640-0.jpg",
     title: "Gordons con tonica",
@@ -51,6 +58,7 @@ export const data = [
     price: "$4180",
   },
   {
+    id: 400,
     category: 4,
     img: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/144/141/products/mesa-de-trabajo-51_1-10011-6bad72be828aca317516696657206839-640-0.jpg",
     title: "Wiskey White horse",
@@ -58,6 +66,7 @@ export const data = [
     price: "$4180",
   },
   {
+    id: 500,
     category: 5,
     img: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/144/141/products/mesa-de-trabajo-51_1-10011-6bad72be828aca317516696657206839-640-0.jpg",
     title: "Havanna Club",
