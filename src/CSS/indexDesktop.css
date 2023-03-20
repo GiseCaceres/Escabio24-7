@@ -1,23 +1,62 @@
-.footer {
+@charset "UTF-8";
+.conteinerDetail {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  background-color: black; }
-  .footer__img {
-    width: 15%;
-    margin: 3%; }
-  .footer__contacto {
-    display: flex;
-    flex-direction: row !important;
-    align-items: center; }
-    .footer__contacto__tituloFooter {
-      color: white;
-      font-family: "Antonio", sans-serif;
-      letter-spacing: 3px; }
-    .footer__contacto__redes {
+  margin: 5%; }
+  .conteinerDetail__img {
+    width: 50%;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px; }
+  .conteinerDetail__body {
+    padding-left: 2%; }
+    .conteinerDetail__body__price {
+      font-size: 1.5rem;
+      color: #0ff200; }
+    .conteinerDetail__body__buttons {
       display: flex;
       flex-direction: row;
-      align-items: center; }
-      .footer__contacto__redes__link {
+      padding: 10%;
+      /* ESTILOS BOTÓN SLIDE LEFT */ }
+      .conteinerDetail__body__buttons__ov-btn-slide {
+        font-family: "Antonio", sans-serif;
+        letter-spacing: 3px;
+        background: #fff;
+        /* color de fondo */
+        color: black;
+        /* color de fuente */
+        border: 2px solid black;
+        /* tamaño y color de borde */
+        padding: 16px 20px;
+        border-radius: 3px;
+        /* redondear bordes */
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        display: inline-flex;
+        justify-content: center;
         text-decoration: none;
-        color: white; }
+        align-items: center;
+        width: 50%; }
+        .conteinerDetail__body__buttons__ov-btn-slide:hover {
+          color: #fff; }
+          .conteinerDetail__body__buttons__ov-btn-slide:hover::after {
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            -webkit-transition: all 0.35s;
+            transition: all 0.35s; }
+        .conteinerDetail__body__buttons__ov-btn-slide::after {
+          content: "";
+          background: black;
+          /* color de fondo hover */
+          position: absolute;
+          z-index: -1;
+          padding: 16px 20px;
+          display: block;
+          top: 0;
+          bottom: 0;
+          left: -100%;
+          right: 100%;
+          -webkit-transition: all 0.35s;
+          transition: all 0.35s; }

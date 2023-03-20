@@ -10,7 +10,7 @@ export const data = [
   {
     id: 101,
     category: 1,
-    img: "assets/delivery.png",
+    img: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/144/141/products/mesa-de-trabajo-51_1-10011-6bad72be828aca317516696657206839-640-0.jpg",
     title: "Fernet 1882",
     description: "Fernet 1882 750ml + 2 coca colas 2.25L",
     price: "$2850",

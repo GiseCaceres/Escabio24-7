@@ -16,15 +16,22 @@ const ItemDetail = () => {
     <>
       {!prod.valor ? (
         <div className="conteinerDetail">
-          <div
+          <img
             className="conteinerDetail__img"
             src={prod.img}
             alt="Card image"
-          ></div>
+          ></img>
           <div className="conteinerDetail__body">
-            <h4>{prod.title}</h4>
+            <h1>{prod.title}</h1>
             <p className="conteinerDetail__body__Text">{prod.description}</p>
             <p className="conteinerDetail__body__price">{prod.price}</p>
+            <div className="conteinerDetail__body__buttons"></div>
+            <button className="conteinerDetail__body__buttons__ov-btn-slide">
+              AGREGAR
+            </button>
+            <button className="conteinerDetail__body__buttons__ov-btn-slide">
+              VER CARRITO
+            </button>
           </div>
         </div>
       ) : (
