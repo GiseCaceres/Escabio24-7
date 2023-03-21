@@ -6,6 +6,7 @@ export const data = [
     title: "Fernet Branca",
     description: "Fernet branca 750ml + 2 coca colas 2.25L",
     price: "$4180",
+    stock: 4,
   },
   {
     id: 101,
@@ -14,6 +15,7 @@ export const data = [
     title: "Fernet 1882",
     description: "Fernet 1882 750ml + 2 coca colas 2.25L",
     price: "$2850",
+    stock: 4,
   },
   {
     id: 200,
@@ -22,6 +24,7 @@ export const data = [
     title: "Smirnoff con speed",
     description: "Smirnoff 750ml sabor clasico + 4 speed 269ml",
     price: "$4180",
+    stock: 4,
   },
   {
     id: 201,
@@ -30,6 +33,7 @@ export const data = [
     title: "Raspberry con speed",
     description: "Smirnoff 750ml sabor Raspberry con 4 speed 269ml",
     price: "$4180",
+    stock: 4,
   },
   {
     id: 203,
@@ -39,6 +43,7 @@ export const data = [
     description:
       "Smirnoff 750ml sabor clasico + 2 jugo baggio sabor naranja de 1L",
     price: "$4180",
+    stock: 4,
   },
   {
     id: 204,
@@ -48,6 +53,7 @@ export const data = [
     description:
       "Smirnoff 750ml sabor Raspberry + 2 jugo baggio sabor naranja de 1L",
     price: "$4180",
+    stock: 4,
   },
   {
     id: 300,
@@ -56,6 +62,7 @@ export const data = [
     title: "Gordons con tonica",
     description: "Gin Gordons 750ml con 2 agua tonica de 1.5L",
     price: "$4180",
+    stock: 4,
   },
   {
     id: 400,
@@ -64,6 +71,7 @@ export const data = [
     title: "Wiskey White horse",
     description: "Whiskey White horse 1L",
     price: "$4180",
+    stock: 4,
   },
   {
     id: 500,
@@ -72,5 +80,6 @@ export const data = [
     title: "Havanna Club",
     description: "Ron Havanna Club 750ml",
     price: "$4180",
+    stock: 4,
   },
 ];

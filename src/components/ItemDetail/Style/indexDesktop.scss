@@ -9,8 +9,10 @@
   }
   &__body {
     padding-left: 2%;
-    &__description {
+    &__titleItem {
+      margin-bottom: 10%;
     }
+
     &__price {
       font-size: 1.5rem;
       color: #0ff200;
@@ -21,6 +23,7 @@
       padding: 10%;
       /* ESTILOS BOTÓN SLIDE LEFT */
       &__ov-btn-slide {
+        margin-right: 3%;
         font-family: "Antonio", sans-serif;
         letter-spacing: 3px;
         background: #fff; /* color de fondo */
@@ -35,7 +38,7 @@
         justify-content: center;
         text-decoration: none;
         align-items: center;
-        width: 50%;
+        width: 45%;
 
         &:hover {
           color: #fff;

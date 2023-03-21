@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import "./CSS/style.css";
 import Card from "./components/Card";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ItemDetail from "./components/ItemDetail.jsx";
+import ItemDetail from "./components/ItemDetail";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
+          <Route path="/" element={<Aside />} />
           <Route path="/aside" element={<Aside />} />
           <Route path="/Cards/:category" element={<Card />} />
           <Route path="/producto/:id" element={<ItemDetail />} />

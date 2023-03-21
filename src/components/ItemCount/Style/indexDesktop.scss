@@ -1,21 +1,16 @@
-@charset "UTF-8";
 .count {
   display: flex;
-  flex-direction: column; }
-  .count__buttonsConteiner {
-    padding-bottom: 10%; }
-    .count__buttonsConteiner__buttons {
+  flex-direction: column;
+  &__buttonsConteiner {
+    padding-bottom: 10%;
+    &__buttons {
       font-family: "Antonio", sans-serif;
       font-size: 25px;
-      background: #fff;
-      /* color de fondo */
-      color: black;
-      /* color de fuente */
-      border: 2px solid black;
-      /* tamaño y color de borde */
+      background: #fff; /* color de fondo */
+      color: black; /* color de fuente */
+      border: 2px solid black; /* tamaño y color de borde */
       padding: 5px 10px;
-      border-radius: 3px;
-      /* redondear bordes */
+      border-radius: 3px; /* redondear bordes */
       position: relative;
       z-index: 1;
       overflow: hidden;
@@ -23,20 +18,18 @@
       justify-content: center;
       text-decoration: none;
       align-items: center;
-      width: 19%; }
-  .count__agregar {
+      width: 19%;
+    }
+  }
+  &__agregar {
     margin-right: 3%;
     font-family: "Antonio", sans-serif;
     letter-spacing: 3px;
-    background: #fff;
-    /* color de fondo */
-    color: black;
-    /* color de fuente */
-    border: 2px solid black;
-    /* tamaño y color de borde */
+    background: #fff; /* color de fondo */
+    color: black; /* color de fuente */
+    border: 2px solid black; /* tamaño y color de borde */
     padding: 16px 20px;
-    border-radius: 3px;
-    /* redondear bordes */
+    border-radius: 3px; /* redondear bordes */
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -44,20 +37,22 @@
     justify-content: center;
     text-decoration: none;
     align-items: center;
-    width: 41%; }
-    .count__agregar:hover {
-      color: #fff; }
-      .count__agregar:hover::after {
+    width: 41%;
+
+    &:hover {
+      color: #fff;
+      &::after {
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
         -webkit-transition: all 0.35s;
-        transition: all 0.35s; }
-    .count__agregar::after {
+        transition: all 0.35s;
+      }
+    }
+    &::after {
       content: "";
-      background: black;
-      /* color de fondo hover */
+      background: black; /* color de fondo hover */
       position: absolute;
       z-index: -1;
       padding: 16px 20px;
@@ -67,4 +62,7 @@
       left: -100%;
       right: 100%;
       -webkit-transition: all 0.35s;
-      transition: all 0.35s; }
+      transition: all 0.35s;
+    }
+  }
+}

@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import { data } from "../../utils/data";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+import ItemCount from "../ItemCount/index";
+import CheckOut from "../checkout/index";
+
 const ItemDetail = () => {
   const { id } = useParams();
   const [prod, setProd] = useState({});
@@ -11,6 +14,13 @@ const ItemDetail = () => {
     else setProd({ error: "El producto no esta disponible", valor: false });
     console.log(prod);
   }, [id]);
+
+  const [count, setCount] = useState(0);
+
+  const onAdd = (qsy) => {
+    alert("Se agregaron " + qsy + " a tu carrito");
+    setCount(qsy);
+  };
 
   return (
     <>
@@ -22,16 +32,17 @@ const ItemDetail = () => {
             alt="Card image"
           ></img>
           <div className="conteinerDetail__body">
-            <h1>{prod.title}</h1>
+            <h1 className="conteinerDetail__body__titleItem">{prod.title}</h1>
             <p className="conteinerDetail__body__Text">{prod.description}</p>
             <p className="conteinerDetail__body__price">{prod.price}</p>
             <div className="conteinerDetail__body__buttons"></div>
-            <button className="conteinerDetail__body__buttons__ov-btn-slide">
-              AGREGAR
-            </button>
-            <button className="conteinerDetail__body__buttons__ov-btn-slide">
-              VER CARRITO
-            </button>
+            <div className="conteinerDetail__body__count">
+              {count === 0 ? (
+                <ItemCount stock={prod.stock} initial={0} addCarrito={onAdd} />
+              ) : (
+                <CheckOut />
+              )}
+            </div>
           </div>
         </div>
       ) : (
