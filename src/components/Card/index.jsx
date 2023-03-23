@@ -9,7 +9,6 @@ const Card = () => {
 
   useEffect(() => {
     setItems([]);
-    console.log(category);
     if (category !== undefined)
       setItems(data.filter((item) => item.category == category));
     else setItems(data);
@@ -25,6 +24,7 @@ const Card = () => {
           title={obj.title}
           description={obj.description}
           price={obj.price}
+          id={obj.id}
         ></Cards>
       ))}
     </>
