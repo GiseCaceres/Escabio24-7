@@ -19,7 +19,7 @@ const NavbarDesktop = () => {
         </Link>
         <ul className="navbarDesktop__lista">
           <li>
-            <h3>Inicio</h3>
+            <h3>Inicio!</h3>
             <div className="navbarDesktop__lista__div" />
           </li>
           <li>
