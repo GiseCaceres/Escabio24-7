@@ -1,0 +1,71 @@
+.conteinerDetail {
+  display: flex;
+  flex-direction: row;
+  margin: 5%;
+  &__img {
+    width: 50%;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+  }
+  &__body {
+    padding-left: 2%;
+    &__titleItem {
+      margin-bottom: 10%;
+    }
+
+    &__price {
+      font-size: 1.5rem;
+      color: #0ff200;
+    }
+    &__buttons {
+      display: flex;
+      flex-direction: row;
+      padding: 10%;
+      /* ESTILOS BOTÓN SLIDE LEFT */
+      &__ov-btn-slide {
+        margin-right: 3%;
+        font-family: "Antonio", sans-serif;
+        letter-spacing: 3px;
+        background: #fff; /* color de fondo */
+        color: black; /* color de fuente */
+        border: 2px solid black; /* tamaño y color de borde */
+        padding: 16px 20px;
+        border-radius: 3px; /* redondear bordes */
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        display: inline-flex;
+        justify-content: center;
+        text-decoration: none;
+        align-items: center;
+        width: 45%;
+
+        &:hover {
+          color: #fff;
+          &::after {
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            -webkit-transition: all 0.35s;
+            transition: all 0.35s;
+          }
+        }
+        &::after {
+          content: "";
+          background: black; /* color de fondo hover */
+          position: absolute;
+          z-index: -1;
+          padding: 16px 20px;
+          display: block;
+          top: 0;
+          bottom: 0;
+          left: -100%;
+          right: 100%;
+          -webkit-transition: all 0.35s;
+          transition: all 0.35s;
+        }
+      }
+    }
+  }
+}
