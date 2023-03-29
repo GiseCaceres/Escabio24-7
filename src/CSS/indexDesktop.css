@@ -1,19 +1,24 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@1&display=swap");
 .count {
   display: flex;
   flex-direction: column; }
   .count__buttonsConteiner {
-    padding-bottom: 10%; }
+    padding-bottom: 5%;
+    justify-content: space-between;
+    width: 41%;
+    display: flex;
+    align-items: center; }
     .count__buttonsConteiner__buttons {
-      font-family: "Antonio", sans-serif;
+      font-family: "DM Serif Text", serif;
       font-size: 25px;
       background: #fff;
       /* color de fondo */
       color: black;
       /* color de fuente */
-      border: 2px solid black;
+      border: 1px solid black;
       /* tamaño y color de borde */
-      padding: 5px 10px;
+      padding: 0px 10px;
       border-radius: 3px;
       /* redondear bordes */
       position: relative;
@@ -23,7 +28,10 @@
       justify-content: center;
       text-decoration: none;
       align-items: center;
-      width: 19%; }
+      width: 30%; }
+      .count__buttonsConteiner__buttons:hover {
+        background-color: black;
+        color: white; }
   .count__agregar {
     margin-right: 3%;
     font-family: "Antonio", sans-serif;
@@ -34,7 +42,7 @@
     /* color de fuente */
     border: 2px solid black;
     /* tamaño y color de borde */
-    padding: 16px 20px;
+    padding: 10px 20px;
     border-radius: 3px;
     /* redondear bordes */
     position: relative;

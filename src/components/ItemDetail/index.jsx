@@ -1,13 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { data } from "../../utils/data";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import ItemCount from "../ItemCount/index";
-import CheckOut from "../checkout/index";
+import CheckOut from "../Checkout/index";
+import { CardContext } from "../Context";
 
 const ItemDetail = () => {
   const { id } = useParams();
   const [prod, setProd] = useState({});
+
+  const context = useContext(CardContext);
 
   useEffect(() => {
     if (id !== undefined) setProd(data.find((item) => item.id == id));
@@ -20,6 +23,10 @@ const ItemDetail = () => {
   const onAdd = (qsy) => {
     alert("Se agregaron " + qsy + " a tu carrito");
     setCount(qsy);
+  };
+
+  const addCart = () => {
+    context.onAddCart(prod);
   };
 
   return (
@@ -40,7 +47,7 @@ const ItemDetail = () => {
               {count === 0 ? (
                 <ItemCount stock={prod.stock} initial={0} addCarrito={onAdd} />
               ) : (
-                <CheckOut />
+                <CheckOut onAddCart={addCart} />
               )}
             </div>
           </div>
