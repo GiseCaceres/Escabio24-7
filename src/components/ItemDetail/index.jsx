@@ -3,7 +3,7 @@ import { data } from "../../utils/data";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import ItemCount from "../ItemCount/index";
-import CheckOut from "../Checkout/index";
+import CheckOut from "../checkout/index";
 import { CardContext } from "../Context";
 
 const ItemDetail = () => {
@@ -15,7 +15,6 @@ const ItemDetail = () => {
   useEffect(() => {
     if (id !== undefined) setProd(data.find((item) => item.id == id));
     else setProd({ error: "El producto no esta disponible", valor: false });
-    console.log(prod);
   }, [id]);
 
   const [count, setCount] = useState(0);
@@ -26,7 +25,7 @@ const ItemDetail = () => {
   };
 
   const addCart = () => {
-    context.onAddCart(prod);
+    context.onAddCart(prod, count);
   };
 
   return (
@@ -45,9 +44,14 @@ const ItemDetail = () => {
             <div className="conteinerDetail__body__buttons"></div>
             <div className="conteinerDetail__body__count">
               {count === 0 ? (
-                <ItemCount stock={prod.stock} initial={0} addCarrito={onAdd} />
+                <ItemCount
+                  stock={prod.stock}
+                  initial={0}
+                  addCarrito={onAdd}
+                  producto={prod}
+                />
               ) : (
-                <CheckOut onAddCart={addCart} />
+                <CheckOut />
               )}
             </div>
           </div>
