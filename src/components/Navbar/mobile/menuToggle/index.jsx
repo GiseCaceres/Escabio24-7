@@ -4,7 +4,6 @@ const MenuToggle = ({ funcion, variable }) => {
   const [classCruz, setClassCruz] = useState("");
   const [classBurger, setClassBurger] = useState("");
   useEffect(() => {
-    console.log(variable);
     if (variable) {
       setClassCruz("navbarMobile__menu__cross--active");
       setClassBurger("");

@@ -1,18 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { data } from "../../utils/data";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import ItemCount from "../ItemCount/index";
 import CheckOut from "../checkout/index";
+import { CardContext } from "../Context";
 
 const ItemDetail = () => {
   const { id } = useParams();
   const [prod, setProd] = useState({});
 
+  const context = useContext(CardContext);
+
   useEffect(() => {
     if (id !== undefined) setProd(data.find((item) => item.id == id));
     else setProd({ error: "El producto no esta disponible", valor: false });
-    console.log(prod);
   }, [id]);
 
   const [count, setCount] = useState(0);
@@ -20,6 +22,10 @@ const ItemDetail = () => {
   const onAdd = (qsy) => {
     alert("Se agregaron " + qsy + " a tu carrito");
     setCount(qsy);
+  };
+
+  const addCart = () => {
+    context.onAddCart(prod, count);
   };
 
   return (
@@ -38,7 +44,12 @@ const ItemDetail = () => {
             <div className="conteinerDetail__body__buttons"></div>
             <div className="conteinerDetail__body__count">
               {count === 0 ? (
-                <ItemCount stock={prod.stock} initial={0} addCarrito={onAdd} />
+                <ItemCount
+                  stock={prod.stock}
+                  initial={0}
+                  addCarrito={onAdd}
+                  producto={prod}
+                />
               ) : (
                 <CheckOut />
               )}

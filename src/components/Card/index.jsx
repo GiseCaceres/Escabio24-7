@@ -12,7 +12,6 @@ const Card = () => {
     if (category !== undefined)
       setItems(data.filter((item) => item.category == category));
     else setItems(data);
-    console.log(items);
   }, [category]);
 
   return (

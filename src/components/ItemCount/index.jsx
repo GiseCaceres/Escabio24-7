@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useContext } from "react";
+import { CardContext } from "../Context";
 
-const ItemCount = ({ stock, initial, addCarrito }) => {
+const ItemCount = ({ stock, initial, addCarrito, producto }) => {
   const [contador, setContador] = useState(initial);
+  const { onAddCart } = useContext(CardContext);
 
   const increment = () => {
     //1
@@ -22,6 +25,7 @@ const ItemCount = ({ stock, initial, addCarrito }) => {
   const agregar = () => {
     //3
     addCarrito(contador);
+    onAddCart(producto, contador);
   };
 
   return (

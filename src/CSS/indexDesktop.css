@@ -1,109 +1,136 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@1&display=swap");
 .navbarMobile {
-  display: none; }
+  display: none;
+}
 
 .navbarDesktop {
   position: relative;
   background-color: black;
   display: flex;
   align-items: center;
-  height: 10vh; }
-  .navbarDesktop__carro {
-    right: 0;
-    bottom: 0;
-    height: 60%;
-    width: 20%;
-    text-align: center; }
-    .navbarDesktop__carro svg {
-      display: inline-block;
-      padding: 3.5%;
-      height: 100%;
-      width: 35%;
-      transition: all 1s; }
-      .navbarDesktop__carro svg path {
-        fill: white; }
-      .navbarDesktop__carro svg:hover {
-        padding: 1.5%; }
-  .navbarDesktop__containerImg {
-    text-align: center;
-    height: 100%;
-    width: 20%; }
-    .navbarDesktop__containerImg img {
-      height: 100%; }
-  .navbarDesktop__icon {
-    transform-origin: top;
-    transform: rotate(0deg);
-    width: 12%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    position: absolute;
-    bottom: -50%;
-    right: 0%; }
-    .navbarDesktop__icon__cartel {
-      border: 1.55px solid #acf189;
-      border-radius: 20px;
-      height: 50%;
-      width: 80%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 8px #008a00, 0 0 8px #008a00, inset 0 0 8px #008a00, inset 0 0 8px #008a00;
-      animation: parpadeo 3s infinite;
-      animation-timing-function: cubic-bezier(0.91, 1.39, 0, -0.47); }
-      .navbarDesktop__icon__cartel h1 {
-        font-size: large;
-        font-family: "DM Serif Text", serif;
-        color: #acf189;
-        text-shadow: 0 0 8px #008a00, 0 0 8px #008a00, 0 0 8px #008a00, 0 0 8px #008a00;
-        animation: parpadeo 3s infinite;
-        animation-timing-function: cubic-bezier(0.91, 1.39, 0, -0.47); }
-  .navbarDesktop__lista {
-    height: 100%;
-    width: 60%; }
-    .navbarDesktop__lista li {
-      position: relative;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: calc(100% / 5);
-      height: 100%;
-      transition: all 1.5s; }
-      .navbarDesktop__lista li h3 {
-        color: white;
-        font-size: medium;
-        font-family: "Antonio", sans-serif;
-        letter-spacing: 3px; }
-      .navbarDesktop__lista li div {
-        background-color: #03a403;
-        height: 1.75%;
-        width: 70%;
-        border-radius: 15px;
-        transition: all 0.75s;
-        position: absolute;
-        bottom: 20%;
-        opacity: 0; }
-      .navbarDesktop__lista li:hover {
-        opacity: 1; }
-        .navbarDesktop__lista li:hover > div {
-          opacity: 1;
-          box-shadow: 0 0 8px #008a00, 0 0 8px #008a00, 0 0 8px #008a00, 0 0 8px #008a00; }
+  height: 10vh;
+}
+.navbarDesktop__carro {
+  right: 0;
+  bottom: 0;
+  height: 60%;
+  width: 20%;
+  text-align: center;
+}
+.navbarDesktop__carro svg {
+  display: inline-block;
+  padding: 3.5%;
+  height: 100%;
+  width: 35%;
+  transition: all 1s;
+}
+.navbarDesktop__carro svg path {
+  fill: white;
+}
+.navbarDesktop__carro svg:hover {
+  padding: 1.5%;
+}
+.navbarDesktop__containerImg {
+  text-align: center;
+  height: 100%;
+  width: 20%;
+}
+.navbarDesktop__containerImg img {
+  height: 100%;
+}
+.navbarDesktop__icon {
+  transform-origin: top;
+  transform: rotate(0deg);
+  width: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: -50%;
+  right: 0%;
+}
+.navbarDesktop__icon__cartel {
+  border: 1.55px solid #acf189;
+  border-radius: 20px;
+  height: 50%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px #008a00, 0 0 8px #008a00, inset 0 0 8px #008a00,
+    inset 0 0 8px #008a00;
+  animation: parpadeo 3s infinite;
+  animation-timing-function: cubic-bezier(0.91, 1.39, 0, -0.47);
+}
+.navbarDesktop__icon__cartel h1 {
+  font-size: large;
+  font-family: "DM Serif Text", serif;
+  color: #acf189;
+  text-shadow: 0 0 8px #008a00, 0 0 8px #008a00, 0 0 8px #008a00,
+    0 0 8px #008a00;
+  animation: parpadeo 3s infinite;
+  animation-timing-function: cubic-bezier(0.91, 1.39, 0, -0.47);
+}
+.navbarDesktop__lista {
+  height: 100%;
+  width: 60%;
+}
+.navbarDesktop__lista li {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 5);
+  height: 100%;
+  transition: all 1.5s;
+}
+.navbarDesktop__lista li h3 {
+  color: white;
+  font-size: medium;
+  font-family: "Antonio", sans-serif;
+  letter-spacing: 3px;
+}
+.navbarDesktop__lista li div {
+  background-color: #03a403;
+  height: 1.75%;
+  width: 70%;
+  border-radius: 15px;
+  transition: all 0.75s;
+  position: absolute;
+  bottom: 20%;
+  opacity: 0;
+}
+.navbarDesktop__lista li:hover {
+  opacity: 1;
+}
+.navbarDesktop__lista li:hover > div {
+  opacity: 1;
+  box-shadow: 0 0 8px #008a00, 0 0 8px #008a00, 0 0 8px #008a00, 0 0 8px #008a00;
+}
 
 @keyframes pendulo {
   0% {
-    transform: rotate(-15deg); }
+    transform: rotate(-15deg);
+  }
   25% {
-    transform: rotate(15deg); }
+    transform: rotate(15deg);
+  }
   50% {
-    transform: rotate(-15deg); }
+    transform: rotate(-15deg);
+  }
   75% {
-    transform: rotate(15deg); }
+    transform: rotate(15deg);
+  }
   100% {
-    transform: rotate(-15deg); } }
+    transform: rotate(-15deg);
+  }
+}
 
 @keyframes parpadeo {
   to {
     text-shadow: none;
-    box-shadow: none; } }
+    box-shadow: none;
+  }
+}
