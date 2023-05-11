@@ -17,7 +17,7 @@ const NavbarDesktop = () => {
             <div className="navbarDesktop__lista__div" />
           </li>
           <li>
-            <h3>Zonas</h3>
+            <h3>Zonas </h3>
             <div className="navbarDesktop__lista__div" />
           </li>
           <li>
