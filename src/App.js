@@ -1,5 +1,5 @@
 import React from "react";
-import Aside from "./components/Aside";
+import Aside from "./components/aside";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./CSS/style.css";
@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetail from "./components/ItemDetail";
 import CartContextProvider from "./components/Context";
 import Cart from "./components/Cart";
+import Products from "./components/Products";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path="/aside" element={<Aside />} />
               <Route path="/Cards/:category" element={<Card />} />
               <Route path="/producto/:id" element={<ItemDetail />} />
+              <Route path="/producto" element={<Products/>} />
               <Route path="/Cart" element={<Cart />} />
             </Routes>
             <Footer />

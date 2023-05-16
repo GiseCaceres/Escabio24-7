@@ -1,70 +1,85 @@
 .products {
   width: 100%;
-  display: flex; }
-  .products__main {
+  display: flex;
+  &__main {
     width: 70%;
     display: flex;
-    flex-wrap: wrap; }
-    .products__main .card {
-      flex-grow: 1; }
-  .products__aside {
+    flex-wrap: wrap;
+    .card {
+      flex-grow: 1;
+    }
+  }
+  &__aside {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25%; }
-    .products__aside__search {
+    width: 25%;
+    &__search {
       margin: 5% 0%;
       width: 80%;
-      display: inline-block; }
-      .products__aside__search h1 {
+      display: inline-block;
+      h1 {
         pointer-events: none;
         margin-bottom: 5%;
         color: black;
         font-size: 1em;
-        font-weight: bold; }
-      .products__aside__search input[type="text"] {
+        font-weight: bold;
+      }
+      input[type="text"] {
         display: inline-block;
         padding: 8px;
         font-size: 12px;
         border: 1px solid #ccc;
-        width: 100%; }
-    .products__aside__title {
+        width: 100%;
+      }
+    }
+    &__title {
       margin: 5% 0%;
       display: inline-block;
       width: 80%;
-      text-align: left; }
-    .products__aside__list {
+      text-align: left;
+    }
+    &__list {
       margin: 5% 0%;
       width: 80%;
       list-style: none;
       text-align: left;
-      display: inline-block; }
-      .products__aside__list .active {
+      display: inline-block;
+      & .active {
         pointer-events: none;
         margin-bottom: 5%;
         color: black;
         font-size: medium;
-        font-weight: bold; }
-      .products__aside__list li {
+        font-weight: bold;
+      }
+      & li {
         font-size: smaller;
         color: #838383;
-        padding: 2% 0%; }
-        .products__aside__list li:hover {
+        padding: 2% 0%;
+        &:hover {
           color: #2c2c2c;
-          text-decoration: underline; }
-    .products__aside__range {
+          text-decoration: underline;
+        }
+      }
+    }
+    &__range {
       margin: 5% 0%;
       width: 80%;
-      display: inline-block; }
-      .products__aside__range h1 {
+      display: inline-block;
+      h1 {
         pointer-events: none;
         margin-bottom: 5%;
         color: black;
         font-size: 1em;
-        font-weight: bold; }
-      .products__aside__range input[type="text"] {
+        font-weight: bold;
+      }
+      input[type="text"] {
         display: inline-block;
         padding: 8px;
         font-size: 12px;
         border: 1px solid #ccc;
-        width: 45%; }
+        width: 45%;
+      }
+    }
+  }
+}

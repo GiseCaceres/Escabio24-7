@@ -10,6 +10,7 @@
 
 /*   Medidas desktop   */
 @media screen and (min-width: 851px) {
+ 
   /*         Main         */
   @import "../components/Main/Style/index.scss";
   /*         NavBar       */
@@ -28,4 +29,6 @@
   @import "../components/Form/Style/index.scss";
   /*         Footer       */
   @import "../components/Footer/Style/indexDesktop.scss";
+  /*         Productos    */
+  @import "../components/Products/Styles/index.scss";
 }
