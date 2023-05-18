@@ -13,26 +13,18 @@ const Card = ({ optional, search, priceLess, priceBigger }) => {
       .normalize("NFD")
       .replace(/\p{Diacritic}/gu, "");
   }
-  useEffect(() => {
-    console.log(priceLess, priceBigger);
-    let filtrado = category
-      ? data.filter((item) => item.category == category)
-      : (optional && data.filter((item) => item.category == optional)) || data;
-
-    if (search) {
-      filtrado = filtrado.filter((item) =>
-        removeDiacritic(item.title).includes(removeDiacritic(search))
-      );
-    }
-    if (priceLess || priceBigger) {
-      filtrado = filtrado.filter(
-        (item) =>
-          item.price >= (priceLess || 0) &&
-          item.price <= (priceBigger || Infinity)
-      );
-    }
-    setItems(filtrado);
-  }, [category, optional, search, priceLess, priceBigger]);
+useEffect(() => {
+  const filtrado = data.filter(
+    (item) =>
+      (!category || item.category === category) &&
+      (!optional || item.category === optional) &&
+      (!search ||
+        removeDiacritic(item.title).includes(removeDiacritic(search))) &&
+      item.price >= (priceLess || 0) &&
+      item.price <= (priceBigger || Infinity)
+  );
+  setItems(filtrado);
+}, [category, optional, search, priceLess, priceBigger]);
 
   return (
     <>
