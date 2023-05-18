@@ -2,11 +2,12 @@
   width: 100%;
   display: flex;
   &__main {
-    width: 70%;
+    width: 75%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     .card {
-      flex-grow: 1;
+      width:27%;
     }
   }
   &__aside {
@@ -25,7 +26,7 @@
         font-size: 1em;
         font-weight: bold;
       }
-      input[type="text"] {
+      input {
         display: inline-block;
         padding: 8px;
         font-size: 12px;
@@ -73,7 +74,7 @@
         font-size: 1em;
         font-weight: bold;
       }
-      input[type="text"] {
+      input {
         display: inline-block;
         padding: 8px;
         font-size: 12px;
