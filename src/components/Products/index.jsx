@@ -1,92 +1,72 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "../Card";
+import { Link, useParams } from "react-router-dom";
 
 const Products = () => {
-  const [option, setOption] = useState(undefined);
   const [search, setSearch] = useState("");
   const [priceLess, setPriceLess] = useState(null);
   const [priceBigger, setPriceBigger] = useState(null);
+  const categoryOptions = [
+    { id: "", label: "todo" },
+    { id: "fernet", label: "Fernet" },
+    { id: "vodka", label: "Vodka" },
+    { id: "espumantes", label: "Espumantes" },
+    { id: "ron", label: "Ron" },
+    { id: "cerveza", label: "Cerveza" },
+    { id: "gin tonic", label: "Gin tonic" },
+    { id: "aperitivos", label: "Aperitivos" },
+    { id: "wisky", label: "Wisky" },
+    { id: "comestible", label: "Comestible" },
+  ];
+
   return (
-    <>
-      <main className="products">
-        <aside className="products__aside">
-          <h1 className="products__aside__title">Productos</h1>
-          <section className="products__aside__search">
-            <h1>Buscar</h1>
-            <input
-              className=""
-              type="text"
-              placeholder="Buscar..."
-              onChange={(data) => {
-                setSearch(data.target.value);
-              }}
-              value={search}
-            />
-          </section>
-          <ul className="products__aside__list">
-            <li className="active">
-              <a>Categorias</a>
-            </li>
-            <li onClick={() => setOption(undefined)}>
-              <a>todo</a>
-            </li>
-            <li onClick={() => setOption(1)}>
-              <a>Fernet</a>
-            </li>
-            <li onClick={() => setOption(2)}>
-              <a>Vodka</a>
-            </li>
-            <li onClick={() => setOption(7)}>
-              <a>Espumantes</a>
-            </li>
-            <li onClick={() => setOption(5)}>
-              <a>Ron</a>
-            </li>
-            <li onClick={() => setOption(8)}>
-              <a>Cerveza</a>
-            </li>
-            <li onClick={() => setOption(3)}>
-              <a>Gin tonic</a>
-            </li>
-            <li onClick={() => setOption(6)}>
-              <a>Aperitivos</a>
-            </li>
-            <li onClick={() => setOption(4)}>
-              <a>Wisky</a>
-            </li>
-            <li onClick={() => setOption(9)}>
-              <a>Comestible</a>
-            </li>
-          </ul>
-          <section className="products__aside__range">
-            <h1>rango de precios</h1>
-            <input
-              className=""
-              type="number"
-              placeholder="$1000"
-              onChange={(data) => setPriceLess(data.target.value)}
-              value={priceLess}
-            />{" "}
-            -{" "}
-            <input
-              className=""
-              type="number"
-              placeholder="$5000"
-              onChange={(data) => setPriceBigger(data.target.value)}
-              value={priceBigger}
-            />
-          </section>
-        </aside>
-        <main className="products__main">
-          <Card
-            optional={option}
-            search={search}
-            priceLess={priceLess}
-            priceBigger={priceBigger}
-          ></Card>
-        </main>
+    <main className="products">
+      <aside className="products__aside">
+        <h1 className="products__aside__title">Productos</h1>
+        <section className="products__aside__search">
+          <h1>Buscar</h1>
+          <input
+            type="text"
+            placeholder="Buscar..."
+            onChange={(e) => setSearch(e.target.value)}
+            value={search}
+          />
+        </section>
+        <ul className="products__aside__list">
+          <li className="active">
+            <a>Categorias</a>
+          </li>
+          {categoryOptions.map((option) => (
+            <Link
+              style={{ textDecoration: "none" }}
+              key={option.id}
+              to={`/producto/${option.id}`}
+            >
+              <li>{option.label}</li>
+            </Link>
+          ))}
+        </ul>
+        <section className="products__aside__range">
+          <h1>rango de precios</h1>
+          <input
+            type="number"
+            placeholder="$1000"
+            onChange={(e) => setPriceLess(e.target.value)}
+            value={priceLess}
+          />
+          {" - "}
+          <input
+            type="number"
+            placeholder="$5000"
+            onChange={(e) => setPriceBigger(e.target.value)}
+            value={priceBigger}
+          />
+        </section>
+      </aside>
+      <main className="products__main">
+        <Card search={search} priceLess={priceLess} priceBigger={priceBigger} />
       </main>
-    </>
+    </main>
   );
 };
 

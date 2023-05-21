@@ -113,6 +113,7 @@
             display: none;
             border: 1px ridge #858585; }
             .navbarDesktop__category__lista li h3 ul li {
+              text-shadow: none;
               color: black;
               display: block;
               text-align: start;
