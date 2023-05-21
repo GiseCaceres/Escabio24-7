@@ -5,38 +5,18 @@
 }
 .navbarDesktop {
   position: relative;
-  background-color: black;
+  background-image: url("../../public/asset/navbar2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
   display: flex;
+  justify-content: center;
   align-items: center;
-  height: 10vh;
-  &__carro {
-    right: 0;
-    bottom: 0;
-    height: 60%;
-    width:20%;
-    text-align: center;
-    svg {
-      path {
-        fill: white;
-      }
-      display: inline-block;
-      padding: 3.5%;
-      height: 100%;
-      width: 35%;
-      transition: all 1s;
+  height: 70vh;
+  z-index: 5;
 
-      &:hover {
-        padding: 1.5%;
-      }
-    }
-  }
-  &__containerImg{
-    text-align: center;
-    height: 100%;
-    width: 20%;
-      img {
-    height: 100%;
-  }
+  &__img {
+    position: absolute;
   }
 
   &__icon {
@@ -48,7 +28,7 @@
     align-items: center;
     justify-content: flex-end;
     position: absolute;
-    bottom: -50%;
+    bottom: -15%;
     right: 0%;
 
     &__cartel {
@@ -74,45 +54,112 @@
       }
     }
   }
+  &__category {
+    height: 10vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__carro {
+      display: inline-block;
+      right: 0;
+      bottom: 0;
+      height: 60%;
+      width: 7%;
+      text-align: center;
+      svg {
+        path {
+          fill: white;
+        }
+        display: inline-block;
+        padding: 3.5%;
+        height: 100%;
+        width: 35%;
+        transition: all 1s;
 
-  &__lista {
-    height: 100%;
-    width: 60%;
-    li {
-      h3 {
-        color: white;
+        &:hover {
+          padding: 1.5%;
+        }
+      }
+    }
+    &__containerImg {
+      text-align: center;
+      height: 100%;
+      width: 20%;
+      img {
+        height: 100%;
+      }
+    }
+
+    &__lista {
+      height: 100%;
+      width: 45%;
+      display: flex;
+      align-items: center;
+      &__title {
+        text-decoration: none;
         font-size: medium;
         font-family: "Antonio", sans-serif;
         letter-spacing: 3px;
+        color: rgb(199, 199, 199);
+        text-shadow: 2px 2px #1d1c1c;
       }
-      position: relative;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: calc(100% / 5);
-      height: 100%;
-      transition: all 1.5s;
-      & div {
-        background-color: rgb(3, 164, 3);
-        height: 1.75%;
-        width: 70%;
-        border-radius: 15px;
-        transition: all 0.75s;
-        position: absolute;
-        bottom: 20%;
-        opacity: 0;
-      }
-      &:hover {
-        opacity: 1;
-        & > div {
-          opacity: 1;
-          box-shadow: 0 0 8px rgb(0, 138, 0), 0 0 8px rgb(0, 138, 0),
-            0 0 8px rgb(0, 138, 0), 0 0 8px rgb(0, 138, 0);
+      li {
+        h3 {
+          
+          display: inline;
+          position: relative;
+          color: rgb(199, 199, 199);
+          font-size: medium;
+          font-family: "Antonio", sans-serif;
+          letter-spacing: 3px;
+          &:hover {
+            color: rgb(245, 245, 245);
+          }
+          ul {
+            position: absolute;
+            top: 110%;
+            left: 0%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(236, 236, 236);
+            position: absolute;
+            display: none;
+            border: 1px ridge rgb(133, 133, 133);
+            li {
+              text-shadow: none;
+              color: black;
+              display: block;
+              text-align: start;
+              padding: 10px 0px;
+              padding-left: 16px;
+              font-size: medium;
+              font-family: "Antonio", sans-serif;
+              width: 15vw;
+              &:hover{
+                background: #5a5a5a;
+                color:white
+              }
+            }
+          }
+          &:hover {
+            opacity: 1;
+            & > ul {
+              display: flex;
+            }
+          }
         }
+        display: inline;
+        flex-grow: 1;
+        text-align: center;
       }
     }
   }
 }
+
 @keyframes pendulo {
   0% {
     transform: rotate(-15deg);

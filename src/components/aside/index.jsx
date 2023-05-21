@@ -4,28 +4,31 @@ const Aside = ({ Main }) => {
   const sections = [
     {
       title: "Gintonic",
-      category: 3,
+      category: "gin tonic",
       url: "../asset/gin.png",
     },
     {
-      category: 1,
+      category: "fernet",
       title: "Fernet",
       url: "../asset/fernet.png",
     },
     {
-      category: 2,
+      category: "vodka",
       title: "Vodka",
       url: "../asset/vodka.png",
     },
     {
+      category: "espumantes",
       title: "Espumantes",
       url: "../asset/espumantes.png",
     },
     {
+      category: "aperitivos",
       title: "Aperitivos",
       url: "../asset/gancia.png",
     },
     {
+      category: "comestible",
       title: "Otros",
       url: "https://buenavibra.es/wp-content/uploads/2016/12/chizitos-1_opt.jpg",
     },
@@ -40,7 +43,7 @@ const Aside = ({ Main }) => {
         {sections.map((section, index) => (
           <Link
             className="aside__section"
-            to={"/Cards/" + section.category}
+            to={"/producto/" + section.category}
             key={index}
           >
             <img

@@ -1,49 +1,93 @@
 import { Link } from "react-router-dom";
 import logo from "../../../img/logo.jpg";
 import Icon from "./icono";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
 const NavbarDesktop = () => {
-  return (
-    <>
-      <nav className="navbarDesktop">
-        <div className="navbarDesktop__containerImg">
-          <Link to="/aside">
-            <img src={logo} alt="logo escabio 24/7"></img>
-          </Link>
-        </div>
+  library.add(faChevronDown);
+const categoryOptions = [
+  { id: "", label: "todo" },
+  { id: "fernet", label: "Fernet" },
+  { id: "vodka", label: "Vodka" },
+  { id: "espumantes", label: "Espumantes" },
+  { id: "ron", label: "Ron" },
+  { id: "cerveza", label: "Cerveza" },
+  { id: "gin tonic", label: "Gin tonic" },
+  { id: "aperitivos", label: "Aperitivos" },
+  { id: "wisky", label: "Wisky" },
+  { id: "comestible", label: "Comestible" },
+];
+return (
+  <>
+    <nav className="navbarDesktop">
+      <img className="navbarDesktop__img" src="../asset/navbar.png"></img>
 
-        <ul className="navbarDesktop__lista">
+      <section className="navbarDesktop__category">
+        <ul className="navbarDesktop__category__lista">
           <li>
-            <h3>Inicio</h3>
-            <div className="navbarDesktop__lista__div" />
+            <Link className="navbarDesktop__category__lista__title" to="/">
+              <h3>Inicio</h3>
+            </Link>
           </li>
           <li>
             <h3>Zonas</h3>
-            <div className="navbarDesktop__lista__div" />
           </li>
           <li>
-            <h3>Productos</h3>
-            <div className="navbarDesktop__lista__div" />
+            <h3>
+              <Link
+                className="navbarDesktop__category__lista__title"
+                to="/producto"
+              >
+                Productos
+              </Link>
+              <ul>
+                {categoryOptions.map((item) => {
+                  const category = item.id;
+                  return (
+                    <Link
+                      className="navbarDesktop__category__lista__title"
+                      to={`/producto/${category}`}
+                    >
+                      <li>{item.label}</li>
+                    </Link>
+                  );
+                })}
+              </ul>
+              <FontAwesomeIcon
+                icon={["fas", "chevron-down"]}
+                style={{
+                  fontSize: "0.7rem",
+                  marginLeft: "0.2rem",
+                  marginBottom: "0.2rem",
+                }}
+              />
+            </h3>
           </li>
           <li>
-            <h3>Contacto</h3>
-            <div className="navbarDesktop__lista__div" />
+            <a
+              className="navbarDesktop__category__lista__title"
+              href="#contacto"
+            >
+              <h3>Contacto</h3>
+            </a>
           </li>
           <li>
             <h3>Ofertas</h3>
-            <div className="navbarDesktop__lista__div" />
           </li>
         </ul>
 
-        <div className="navbarDesktop__carro">
+        <div className="navbarDesktop__category__carro">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
             <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
           </svg>
         </div>
+      </section>
 
-        <Icon></Icon>
-      </nav>
-    </>
-  );
+      <Icon></Icon>
+    </nav>
+  </>
+);
 };
 
 export default NavbarDesktop;
