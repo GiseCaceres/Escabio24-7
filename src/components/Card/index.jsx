@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { data } from "../../utils/data";
 import Cards from "./ContentCard/index";
 
-const Card = ({ search, priceLess, priceBigger }) => {
+const Card = ({ search, priceLess, priceBigger, setId }) => {
   const { category } = useParams();
   const [items, setItems] = useState([]);
 
@@ -37,6 +37,7 @@ const Card = ({ search, priceLess, priceBigger }) => {
             description={obj.description}
             price={obj.price}
             id={obj.id}
+            setId={setId}
           />
         ))
       ) : (

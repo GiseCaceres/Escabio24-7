@@ -1,26 +1,60 @@
-* {
-  scroll-behavior: smooth; }
-
-.footer {
+@charset "UTF-8";
+.conteinerDetail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: black; }
-  .footer__img {
-    width: 15%;
-    margin: 3%; }
-  .footer__contacto {
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Ajusta el nivel de opacidad según tus necesidades */
+  z-index: 999;
+  /* Asegúrate de que la ventana emergente esté por encima de los demás elementos */ }
+  .conteinerDetail__card {
     display: flex;
-    flex-direction: row !important;
-    align-items: center; }
-    .footer__contacto__tituloFooter {
-      color: white;
-      font-family: "Antonio", sans-serif;
-      letter-spacing: 3px; }
-    .footer__contacto__redes {
+    flex-direction: column;
+    background-color: white;
+    width: 40%;
+    height: 80%;
+    border-radius: 8px;
+    position: relative; }
+    .conteinerDetail__card__cruz {
+      position: absolute;
+      opacity: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 2.5%;
+      left: 2.5%; }
+    .conteinerDetail__card__image {
+      width: 100%;
+      height: 40%;
+      overflow: hidden; }
+      .conteinerDetail__card__image__img {
+        width: 100%;
+        /* Quita el ancho fijo del 40% */
+        height: 100%;
+        /* Establece la altura al 100% */
+        object-fit: cover; }
+    .conteinerDetail__card__body__contentTitle {
       display: flex;
       flex-direction: row;
-      align-items: center; }
-      .footer__contacto__redes__link {
-        text-decoration: none;
-        color: white; }
+      justify-content: space-evenly;
+      box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2);
+      /* Agrega la sombra solo en la parte inferior */ }
+      .conteinerDetail__card__body__contentTitle__titleItem {
+        font-size: 30px;
+        font-family: "Antonio", sans-serif;
+        padding-bottom: 5%; }
+      .conteinerDetail__card__body__contentTitle__price {
+        font-size: 1.2rem;
+        color: #17af0c;
+        font-size: 30px;
+        font-family: "Antonio", sans-serif; }
+    .conteinerDetail__card__body__cont {
+      display: flex;
+      justify-content: center; }
+      .conteinerDetail__card__body__cont__description {
+        margin-top: 5%; }

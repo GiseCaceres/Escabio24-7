@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "../Card";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import ItemDetail from "../ItemDetail/index";
 
 const Products = () => {
   const [search, setSearch] = useState("");
@@ -18,7 +19,10 @@ const Products = () => {
     { id: "wisky", label: "Wisky" },
     { id: "comestible", label: "Comestible" },
   ];
-
+  const [id, setId] = useState();
+  useEffect(() => {
+    console.log(id);
+  }, [id]);
   return (
     <main className="products">
       <aside className="products__aside">
@@ -64,8 +68,14 @@ const Products = () => {
         </section>
       </aside>
       <main className="products__main">
-        <Card search={search} priceLess={priceLess} priceBigger={priceBigger} />
+        <Card
+          search={search}
+          priceLess={priceLess}
+          priceBigger={priceBigger}
+          setId={setId}
+        />
       </main>
+      {id && <ItemDetail id={id} setId={setId}></ItemDetail>}
     </main>
   );
 };

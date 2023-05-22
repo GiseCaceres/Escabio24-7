@@ -1,5 +1,5 @@
 import React from "react";
-import Aside from "./components/aside";
+import Aside from "./components/Aside";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./CSS/style.css";
@@ -20,9 +20,9 @@ function App() {
             <Routes>
               <Route path="/" element={<Aside />} />
               <Route path="/aside" element={<Aside />} />
-              <Route path="/producto/:category" element={<Products/>} />
-              <Route path="/producto/:id" element={<ItemDetail />} />
-              <Route path="/producto" element={<Products/>} />
+              <Route path="/producto/:category" element={<Products />} />
+              <Route path="/producto/:category/:id" element={<Products />} />
+              <Route path="/producto" element={<Products />} />
               <Route path="/Cart" element={<Cart />} />
             </Routes>
             <Footer />

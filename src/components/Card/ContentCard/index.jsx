@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Cards = ({ img, title, price, id }) => {
+const Cards = ({ img, title, price, id, setId }) => {
   return (
     <div className="card">
       <div className="card__contenedor">
@@ -19,12 +19,12 @@ const Cards = ({ img, title, price, id }) => {
             </span>
           </div>
           <div className="card__contenedor__detalle__contenedorButton">
-            <Link
-              to={`/producto/${id}`}
+            <button
+              onClick={() => setId(id)}
               class="card__contenedor__detalle__contenedorButton__ov-btn-slide-left"
             >
               VER MÁS
-            </Link>
+            </button>
           </div>
         </div>
       </div>

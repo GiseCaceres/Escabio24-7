@@ -1,21 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@1&display=swap");
 .count {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  &__buttonsConteiner {
-    padding-bottom: 5%;
-    justify-content: space-between;
-    width: 41%;
+  width: 100%;
+  &__cont {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    &__buttons {
-      font-family: "DM Serif Text", serif;
-      font-size: 25px;
+    justify-content: space-around;
+    margin-bottom: 10%;
+    width: 100%;
+    margin-top: 5%;
+    &__countTitle {
+      &__ti {
+        font-family: "Antonio", sans-serif;
+      }
+    }
+    &__buttonsConteiner {
+      display: flex;
+      align-items: center;
+      border-radius: 50px;
+      overflow: hidden;
+      &__contador {
+        margin: 5%;
+      }
+      &__buttons {
+        padding: 5px 12px;
+        border: none;
+        background-color: rgb(214, 214, 214);
+
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+  &__agregar {
+    width: 100%;
+    justify-content: center;
+    box-shadow: 0 -4px 4px -2px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    display: flex;
+    margin-bottom: 5%;
+    &__buttonA {
+      margin-top: 3vw;
+      font-family: "Antonio", sans-serif;
+      letter-spacing: 3px;
       background: #fff; /* color de fondo */
       color: black; /* color de fuente */
       border: 1px solid black; /* tamaño y color de borde */
-      padding: 0px 10px;
-      border-radius: 3px; /* redondear bordes */
+      padding: 10px 20px;
+      border-radius: 50px; /* redondear bordes */
       position: relative;
       z-index: 1;
       overflow: hidden;
@@ -23,55 +61,33 @@
       justify-content: center;
       text-decoration: none;
       align-items: center;
-      width: 30%;
+      width: 90%;
+      height: 30% !important;
       &:hover {
-        background-color: black;
-        color: white;
+        color: #fff;
+        &::after {
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          -webkit-transition: all 0.35s;
+          transition: all 0.35s;
+        }
       }
-    }
-  }
-  &__agregar {
-    margin-right: 3%;
-    font-family: "Antonio", sans-serif;
-    letter-spacing: 3px;
-    background: #fff; /* color de fondo */
-    color: black; /* color de fuente */
-    border: 2px solid black; /* tamaño y color de borde */
-    padding: 10px 20px;
-    border-radius: 3px; /* redondear bordes */
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    display: inline-flex;
-    justify-content: center;
-    text-decoration: none;
-    align-items: center;
-    width: 41%;
-
-    &:hover {
-      color: #fff;
       &::after {
-        left: 0;
-        right: 0;
+        content: "";
+        background: black; /* color de fondo hover */
+        position: absolute;
+        z-index: -1;
+        padding: 16px 20px;
+        display: block;
         top: 0;
         bottom: 0;
+        left: -100%;
+        right: 100%;
         -webkit-transition: all 0.35s;
         transition: all 0.35s;
       }
-    }
-    &::after {
-      content: "";
-      background: black; /* color de fondo hover */
-      position: absolute;
-      z-index: -1;
-      padding: 16px 20px;
-      display: block;
-      top: 0;
-      bottom: 0;
-      left: -100%;
-      right: 100%;
-      -webkit-transition: all 0.35s;
-      transition: all 0.35s;
     }
   }
 }
